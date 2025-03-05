@@ -1,0 +1,4 @@
+Most things went well!
+However, it is easy to type wrong words.
+Additionally, the commands "cp" can work in cygwin but cannot work in bash.
+I wonder why because the same command seems to work on others' computer.
