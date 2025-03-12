@@ -20,7 +20,6 @@ W = X and Y
 print("W的值是 ", W)
 # W的真值表：
 # X | Y | W (X and Y)
-# ---------------
 # T | T | T
 # T | F | F
 # F | T | F
