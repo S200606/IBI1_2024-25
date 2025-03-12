@@ -1,9 +1,10 @@
 a = 15
-b = 75
+b = 75 #75minutes=1hour15minutes
 c = a + b
 d = 90
 e = 5
 f = d + e
+#taking a bus takes more time than driving, driving is quicker
 if c > f:
     print("taking a bus takes more time than driving")
 elif c == f:
