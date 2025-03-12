@@ -1,9 +1,9 @@
-a = 15
+a = 15 
 b = 75 #75minutes=1hour15minutes
-c = a + b
-d = 90
+c = a + b # the total time of taking a bus
+d = 90 #90minutes=1hour30minutes
 e = 5
-f = d + e
+f = d + e # the total time of driving
 #taking a bus takes more time than driving, driving is quicker
 if c > f:
     print("taking a bus takes more time than driving")
