@@ -21,6 +21,6 @@ plt.show()
 #print a specifi language's popularity
 selected_language = "Python"  # You can modify this variable to test other languages
 if selected_language in language:
-    print("The percentage of developers who use {selected_language} is {language[selected_language]}%")
+    print(f"The percentage of developers who use {selected_language} is {language[selected_language]}%")
 else:
-    print("Sorry, {selected_language} is not in the data.")
+    print(f"Sorry, {selected_language} is not in the data.")
