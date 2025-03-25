@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #create the variables
-N = 1000 #the total number of people in the population
+N = 10000 #the total number of people in the population
 beta = 0.3 #infection probability upon contact beta
 gamma = 0.05 #recovery probability
 I0 = 1 #the initial number of infected people
