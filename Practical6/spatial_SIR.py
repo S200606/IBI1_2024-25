@@ -12,6 +12,13 @@ beta = 0.3 #infection probability upon contact beta
 gamma = 0.05 #recovery probability
 times = 100
 
+#draw the initial state of the population
+plt.figure(figsize=(6, 4), dpi=150)
+plt.title("Initial state of the population")
+plt.imshow(population, cmap='viridis', interpolation='nearest')
+plt.colorbar(label="State (0: Susceptible, 1: Infected, 2: Recovered)")
+plt.show()
+
 def SIR(population, beta, gamma, times):
     for t in range(times):
         new_population = population.copy()  # Copy the current state of the population
