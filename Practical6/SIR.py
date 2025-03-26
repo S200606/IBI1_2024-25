@@ -40,3 +40,7 @@ plt.title("SIR Model Simulation")
 plt.xlabel("Time")
 plt.ylabel("Number of People")
 plt.show()
+
+#save the image
+plt.figure(figsize=(6, 4),dpi=150)
+plt.savefig("SIR.png", format="png")
