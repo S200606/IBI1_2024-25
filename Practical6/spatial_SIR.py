@@ -37,7 +37,7 @@ def SIR(population, beta, gamma, times):
         population = new_population  # Update the population state
 
         # Plot the heatmap at specific time points
-        if t in [9, 49, 99]:
+        if t in [9,49,99]:
             plt.figure(figsize=(6, 4), dpi=150)
             plt.title(f"Time step: {t+1}")
             plt.imshow(population, cmap='viridis', interpolation='nearest')
