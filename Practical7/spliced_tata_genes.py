@@ -32,7 +32,7 @@ if gene_entry:
     header, sequence = gene_entry.split("\n", 1)
     header = re.findall(r'(>.*?)[_\s]', header)[0]
     sequence = sequence.replace("\n", "")  
-    genes = re.findall(fr'({donor}.*{acceptor})', sequence)
+    genes = re.findall(fr'({donor}.*?{acceptor})', sequence)
     genes = [gene for gene in genes if re.search(r"TATA[AT]A[AT]", gene)]
     spliced = "".join(genes)  
     numbers = re.findall(r'TATA[AT]A[AT]', spliced)  
