@@ -11,14 +11,18 @@ for line in input:
     if line.startswith(">"):
         if gene_entry:
             header, sequence = gene_entry.split("\n", 1)
-            header = re.findall(r'(>.*?)_', header)[0]#find the header in the gene entry
+            header = re.findall(r'(>.*?)[_\s]', header)[0]#find the header in the gene entry
             sequence = sequence.replace("\n", "")  # remove newlines in the sequence
-            genes = re.findall(fr'(?=({donor}.*?{acceptor}))', sequence)
+            genes = re.findall(fr'({donor}.*{acceptor})', sequence)
             genes = [gene for gene in genes if re.search(r"TATA[AT]A[AT]", gene)]  # select the genes that contain TATA
-            sequence = "".join(genes)  #join the list elements into one line
-            instances_number = len(genes)  #count the number of genes
-            header = f"{header},{instances_number}"
-            spliced_genes.append(f"{header}\n{sequence}")
+            spliced = "".join(genes)  
+            numbers = re.findall(r'TATA[AT]A[AT]', spliced)  
+            instances_number = len(numbers)  #count the number of TATA
+            if re.search(fr'{donor}.*?{acceptor}',sequence):
+              if re.search(r"TATA[AT]A[AT]", sequence):
+                if instances_number > 0:
+                  header = f"{header},{instances_number}"
+                  spliced_genes.append(f"{header}\n{sequence}")
         gene_entry = line.strip()
     else:
         gene_entry += "\n" + line
@@ -26,14 +30,18 @@ for line in input:
 #process the last gene entry
 if gene_entry:
     header, sequence = gene_entry.split("\n", 1)
-    header = re.findall(r'(>.*?)_', header)[0]
+    header = re.findall(r'(>.*?)[_\s]', header)[0]
     sequence = sequence.replace("\n", "")  
-    genes = re.findall(fr'(?=({donor}.*?{acceptor}))', sequence)
+    genes = re.findall(fr'({donor}.*{acceptor})', sequence)
     genes = [gene for gene in genes if re.search(r"TATA[AT]A[AT]", gene)]
-    sequence = "".join(genes)
-    instances_number = len(genes)
-    header = f"{header},{instances_number}"
-    spliced_genes.append(f"{header}\n{sequence}")
+    spliced = "".join(genes)  
+    numbers = re.findall(r'TATA[AT]A[AT]', spliced)  
+    instances_number = len(numbers)  #count the number of TATA
+    if re.search(fr'{donor}.*?{acceptor}',sequence):
+              if re.search(r"TATA[AT]A[AT]", sequence):
+                if instances_number > 0:
+                  header = f"{header},{instances_number}"
+                  spliced_genes.append(f"{header}\n{sequence}")
 
 #write the result to the file:
 output = open(fr"c:\Users\jjbcs\Desktop\IBI\IBI_2024-25\IBI1_2024-25\Practical7\{donor}{acceptor}_spliced_genes.fa", "w")
