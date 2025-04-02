@@ -12,7 +12,7 @@ for line in input:
          if gene_entry:  # process the previous gene entry
              header, sequence = gene_entry.split("\n", 1)#seperate the head and gene sequences by the first newline
              sequence = sequence.replace("\n", "")  # remove newlines in the sequence
-             header = re.findall(r'(>.*?)_', header)[0]#find the header in the gene entry
+             header = re.findall(r'(>.*?)[_\s]', header)[0]#find the header in the gene entry
              if re.search(pattern, sequence):
                  genes.append(f"{header}\n{sequence}")#append the header and sequence to the list
          gene_entry = line.strip()#start a new gene entry
@@ -23,7 +23,7 @@ for line in input:
 if gene_entry:
     header, sequence = gene_entry.split("\n", 1)
     sequence = sequence.replace("\n", "")
-    header = re.findall(r'(>.*?)_', header)[0]
+    header = re.findall(r'(>.*?)[_\s]', header)[0]
     if re.search(pattern,sequence):
         genes.append(f"{header}\n{sequence}")
 
