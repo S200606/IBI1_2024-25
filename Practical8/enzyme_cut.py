@@ -1,7 +1,7 @@
 import re
 def check(DNA_sequence, enzyme_cut_site):
-   if re.search("ACGT",DNA_sequence):
-      if re.search("ACGT",enzyme_cut_site):
+   if re.fullmatch(r"[ACGT]+",DNA_sequence):
+      if re.search(r"[ACGT]+",enzyme_cut_site):
          match = re.search(enzyme_cut_site, DNA_sequence)
          if match:
           wanted = match.start()+1
