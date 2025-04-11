@@ -7,7 +7,7 @@ def check(DNA_sequence, enzyme_cut_site):
           wanted = match.start()+1
           return wanted
          else:
-            return "No match"
+            return "Not match"
             
       else:
          return "Enzyme not valid"
@@ -23,12 +23,12 @@ print(check(dna1, enzyme1))  # Output: 3
 # Case 2
 dna2 = "ACGTXGCT"
 enzyme2 = "AGCT"
-print(check(dna2, enzyme2))  # Output: Enzyme not valid
+print(check(dna2, enzyme2))  # Output: DNA sequence not valid
 
 # Case 3
 dna3 = "AAAAAAA"
 enzyme3 = "ACGT"
-print(check(dna3, enzyme3))  # Output: DNA sequence not valid    
+print(check(dna3, enzyme3))  # Output: Not match  
          
     
       
