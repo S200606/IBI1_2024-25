@@ -1,0 +1,10 @@
+question:
+What country or countries have recorded a DALYs greater than 650,000 in a single year?
+
+line number:
+48-51
+
+discussion:
+In 1994, Rwanda experienced a devastating genocide in which approximately 800,000 to 1,000,000 people were killed within just 100 days. 
+This catastrophic event not only caused an enormous number of direct deaths but also led to the collapse of the healthcare system, mass displacement of people, rapid spread of infectious diseases, widespread malnutrition among children, and severe psychological trauma. 
+The DALYs metric, which combines years of life lost due to premature death and years lived with disability, effectively captures the immense burden of such a national tragedy
