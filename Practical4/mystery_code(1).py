@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:guesses the number of times it takes to get the same number on two dice
+# Answer:output the number of times it takes to get the same number on two dice
 
 # Import libraries
 # randint allows drawing a random number,
