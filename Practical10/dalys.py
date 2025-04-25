@@ -8,13 +8,7 @@ os.chdir(r'c:\Users\jjbcs\Desktop\IBI\IBI_2024-25\IBI1_2024-25\Practical10')
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
 # dalys_data.head(5)
 # print(dalys_data.info())
-dalys_data.describe()
-max = dalys_data['DALYs'].max()
-min = dalys_data['DALYs'].min()
-print(f"Max: {max}, Min: {min}")
-first = dalys_data['Year'].min()
-last = dalys_data['Year'].max()
-print(f"First year: {first}, Last year: {last}")
+print(dalys_data.describe())
 
 print(dalys_data.iloc[0:10,2])
 #he 10th year for which DALYs were recorded in Afghanistan is 1999
@@ -24,7 +18,7 @@ print(dalys_data.loc[:,"Year"])
 #create a Boolean that is True when the “Year” is “1990”, but false otherwise
 year_1990 = dalys_data["Year"] == 1990
 #find exactly the rows 
-print(dalys_data.loc[year_1990,:])
+print(dalys_data.loc[year_1990,"DALYs"])
 
 
 uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
