@@ -1,0 +1,22 @@
+human SOD2 length: 222 amino acids
+
+
+subcellular localisation: mitochondrion matrix
+
+
+
+BLAST results: 58.1%-100%
+
+
+python result:
+huaman vs mouse: 
+Alignment score: 1097
+Percentage of identical amino acids: 90.09%
+huaman vs random: (-229, 5.405405405405405)
+Alignment score: -229
+Percentage of identical amino acids: 5.41%
+mouse vs random: (-232, 4.504504504504505)
+Alignment score: -232
+Percentage of identical amino acids: 4.50%
+
+the human sequence and mouse sequence are most closely related
