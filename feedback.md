@@ -1,0 +1,2 @@
+1. The the commit message of week 3 was not that informative. I tried to make it clearer to see the changes I had done. If the commit message is informative, it can help us remember what changes we have done and help us improve the code.
+2. The intepretion of the mistery code in week 4 was not accurate as the output is not a guess. It exactly shows the times it take to get to the correct number.
